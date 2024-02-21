@@ -14,7 +14,10 @@ app.get("/", async (req, res) => {
     try {
         res.status(200).json({
             success: true,
-            message: "Proxy server is operational :-)"
+            message: "Proxy server is operational :-)",
+            url: {
+                food: process.env.FOOD_URL
+            }
         })
     } catch (err) {
         console.log(err);
